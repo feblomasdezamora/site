@@ -1,0 +1,335 @@
+/* Estilo global */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto; /* Centrar la página */
+    background-color: #F4F9F9; /* Gris metalizado */
+    color: #2C3E50; /* Gris carbón */
+}
+
+/* Navegador */
+nav {
+
+   background: -webkit-radial-gradient(rgb(151, 170, 159), rgb(20, 55, 90));
+background: radial-gradient(rgb(151, 170, 159), rgb(20, 55, 90));
+    
+    color: #FFFFFF; /* Texto blanco */
+    padding: 1.5em 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+    border-bottom: 2px solid #16A085; /* Línea decorativa más suave */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-title {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.nav-title span {
+    font-size: 1.8em;
+    font-weight: bold;
+    display: block;
+    white-space: normal; /* Permite que el texto se divida */
+    word-wrap: break-word;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.title-blue {
+    color: #007BFF; /* Azul fuerte */
+}
+
+.title-green {
+    color: #34495E; /* Gris oscuro (para ASIMRA / OSIMRA) */
+}
+
+.title-red {
+    color: #E74C3C; /* Rojo corporativo */
+}
+
+.title-yellow {
+    color: yellow;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    margin-top: 1em;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #FFFFFF;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #FFFFFF; /* Blanco */
+    text-decoration: none;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #F4D03F; /* Dorado al pasar el mouse */
+    transform: scale(1.05); /* Efecto de crecimiento */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .nav-title span {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-title span {
+        font-size: 1.2em;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: static;
+        width: 100%;
+        background: #1ABC9C;
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
+
+/* Presentación */
+.presentation {
+    background: linear-gradient(to right, #1ABC9C, #007BFF); /* Azul claro a azul fuerte */
+    color: #F9F9F9; /* Blanco humo */
+    text-align: center;
+    padding: 4em 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-bottom: 10px; /* Separación del nav */
+}
+
+.presentation h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.presentation p {
+    font-size: 0.8em;
+    margin: 0;
+    font-weight: 300; /* Ligero */
+}
+
+@media (max-width: 768px) {
+    .presentation h1 {
+        font-size: 2em;
+    }
+
+    .presentation p {
+        font-size: 1em;
+    }
+}
+
+/* Sección ASIMRA */
+.presenta {
+    width: auto;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 -2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border-left: 6px solid #6c62f6; /* Línea decorativa */
+    border-top: #007BFF solid 1px;
+    padding: 7px;
+    color: #007BFF;
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+h5 {
+    margin-top: 10px;
+    text-shadow: 0.1em 0.1em 0.2em rgba(185, 237, 214, 1); /* Sombra de texto */
+}
+
+/* Responsividad para ASIMRA */
+@media (max-width: 768px) {
+    .presenta {
+        font-size: 24px;
+        padding: 5px;
+    }
+
+    h5 {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+}
+
+/* Secciones */
+.section {
+    padding: 3em 2em;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 -2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-left: 6px solid #F4D03F; /* Línea dorada */
+}
+
+.section h2 {
+    margin-bottom: 1em;
+    color: #2C3E50; /* Gris carbón */
+    font-weight: 700;
+}
+
+.section-description {
+    font-size: 1.15em;
+    color: #2C3E50;
+    margin-bottom: 2em;
+    font-weight: 400;
+}
+
+/* Galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste automático */
+    gap: 20px;
+    padding: 1.5em 0;
+    justify-content: center;
+}
+
+.gallery div {
+    border: 1px solid #ddd;
+    padding: 15px;
+    background: #F8F9FA;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Agranda la imagen */
+}
+
+/* Pie de página */
+
+footer {
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    background: radial-gradient(rgb(151, 170, 159), rgb(20, 55, 90));
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    text-align: center;
+}
+
+.redes {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.derechos {
+    border-top: #2a0ff9 solid 2px;
+    padding-top: 10px;
+    font-size: 12px;
+    width: 100%;
+}
+
+.telDire {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsividad del footer */
+@media (max-width: 768px) {
+    footer {
+        gap: 10px;
+    }
+
+    .redes {
+        font-size: 18px;
+        flex-wrap: wrap;
+    }
+
+    .telDire {
+        font-size: 12px;
+    }
+
+    .derechos {
+        font-size: 10px;
+    }
+}
+
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+}
