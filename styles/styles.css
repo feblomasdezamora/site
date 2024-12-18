@@ -159,11 +159,11 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     .presentation h1 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .presentation p {
-        font-size: 1em;
+        font-size: 0.5em;
     }
 }
 
@@ -333,3 +333,87 @@ footer {
     max-width: 80%;
     max-height: 80%;
 }
+h2 a {
+    text-decoration: none;
+    color: inherit; /* Mantiene el color del texto del título */
+}
+
+h2 a:hover {
+    color: #007BFF; /* Azul claro para indicar interactividad */
+    text-decoration: underline;
+}
+
+/* Estilo para los enlaces del título con Google Maps */
+.map-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center; /* Alinea texto e ícono */
+    font-weight: bold;
+}
+
+.map-link img {
+    width: 20px; /* Tamaño del ícono */
+    height: 20px;
+    margin-left: 8px; /* Espacio entre texto e ícono */
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+.map-link:hover img {
+    transform: scale(1.2); /* Agranda el ícono al pasar el mouse */
+}
+
+.map-link:hover {
+    color: #007BFF; /* Azul al pasar el mouse */
+}
+/* Responsive para enlaces con íconos */
+.map-link {
+    font-size: 1.2em; /* Ajuste general */
+}
+
+.map-link img {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .map-link {
+        font-size: 1em; /* Reduce tamaño del texto */
+    }
+
+    .map-link img {
+        width: 18px; /* Reduce tamaño del ícono */
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-link {
+        font-size: 0.9em; /* Ajusta tamaño para pantallas pequeñas */
+    }
+
+    .map-link img {
+        width: 16px; /* Tamaño del ícono más pequeño */
+        height: 16px;
+    }
+}
+
+/* Responsive para mapas interactivos */
+.map-iframe {
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    max-width: 300px; /* Tamaño máximo en pantallas grandes */
+    height: 150px;
+}
+
+@media (max-width: 768px) {
+    .map-iframe {
+        max-width: 250px; /* Reduce tamaño en tabletas */
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-iframe {
+        max-width: 100%; /* Ocupa todo el ancho en móviles */
+        height: 120px;
+    } }
